@@ -1,0 +1,109 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.startupEditor": "newUntitledFile",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "code-runner.runInTerminal": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.formatOnSave": true,
+    "editor.renameOnType": true,
+    "liveServer.settings.useBrowserPreview": true,
+    "liveServer.settings.port": 0,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.sideBar.location": "left",
+    "workbench.colorTheme": "One Dark Pro Flat",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "pauseSlackNotifications": true,
+    "slackAwayStatus": true,
+    "slackAwayStatusText": "CodeTime!",
+    "screenMode": "Full Screen",
+    "flowModeReminders": true,
+    "python.languageServer": "Pylance",
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.commandLineModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "j"],
+      "after": ["j","k"] 
+    }, 
+    {             
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j","k"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["revealInExplorer"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "after": ["_"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": ["$"]
+    }
+    ],
+    "python.showStartPage": false,
+    "workbench.editorAssociations": {
+      "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "explorer.confirmDelete": false,
+    "tabnine.experimentalAutoImports": true,
+    "php.suggest.basic": false,
+    "phpserver.phpPath": "C:/xampp/php/php.exe",
+    "phpserver.browser": "brave",
+    "workbench.iconTheme": "material-icon-theme",
+    "bracket-pair-colorizer-2.depreciation-notice": false
+}
