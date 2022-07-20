@@ -1,4 +1,4 @@
-# Matej's dotfiles and configs
+# My dotfiles and configs
 
 ## Vim setup
 
@@ -21,5 +21,12 @@ Require Neovim (>= 0.7)
 - [nvim-treesitter-refactor](https://github.com/nvim-treesitter/nvim-treesitter-refactor) - Refactor module for nvim-treesitter 
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Find, Filter, Preview, Pick. All lua, all the time
 - [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim) - Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+
+
+## Shell setup
+
+- [Z Shell](https://www.zsh.org/)
+- [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) - Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration
+- [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
 
 
