@@ -27,6 +27,7 @@ Require Neovim (>= 0.7)
 
 - [Z Shell](https://www.zsh.org/)
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) - Oh My Zsh is a delightful, open source, community-driven framework for managing your Zsh configuration
-- [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
+- [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) - Iconic font aggregator, collection, & patcher
+- [Tmux](https://github.com/tmux/tmux) - Tmux is a terminal multiplexer
 
 
