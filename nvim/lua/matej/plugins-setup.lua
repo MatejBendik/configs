@@ -1,16 +1,16 @@
 -- -- auto install packer if not installed
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
-    vim.cmd([[packadd packer.nvim]])
-    return true
-  end
-  return false
+	local fn = vim.fn
+	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+		vim.cmd([[packadd packer.nvim]])
+		return true
+	end
+	return false
 end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
- 
+
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
 vim.cmd([[
@@ -23,83 +23,92 @@ vim.cmd([[
 -- import packer safely
 local status, packer = pcall(require, "packer")
 if not status then
-  return
+	return
 end
 
 return packer.startup(function(use)
-    use("wbthomason/packer.nvim")
+	use("wbthomason/packer.nvim")
 
-    -- lua functions that many plugins use
-    use("nvim-lua/plenary.nvim")
-    
-    use("bluz71/vim-nightfly-guicolors")    -- prefered colorscheme
+	-- lua functions that many plugins use
+	use("nvim-lua/plenary.nvim")
 
-    -- tmux & split window navigator (Ctrl + jkl; move between splitted windows)
-    use("christoomey/vim-tmux-navigator")
+	use("bluz71/vim-nightfly-guicolors") -- prefered colorscheme
 
-    use("szw/vim-maximizer")    -- maximizes and restores current window
+	-- tmux & split window navigator (Ctrl + jkl; move between splitted windows)
+	use("christoomey/vim-tmux-navigator")
 
-    -- essential pluggins
-    -- ysw" ds" cs"'    -- surround word with "", deletes "" around word, changes " to '
-    use("tpope/vim-surround")
+	use("szw/vim-maximizer") -- maximizes and restores current window
 
-    -- commneting with gc
-    use("numToStr/Comment.nvim")
+	-- essential pluggins
+	-- ysw" ds" cs"'    -- surround word with "", deletes "" around word, changes " to '
+	use("tpope/vim-surround")
 
-    -- file explorer
-    use("nvim-tree/nvim-tree.lua")
+	-- commneting with gc
+	use("numToStr/Comment.nvim")
 
-    -- icons
-    use("kyazdani42/nvim-web-devicons")
+	-- file explorer
+	use("nvim-tree/nvim-tree.lua")
 
-    -- statusline 
-    use("nvim-lualine/lualine.nvim")
+	-- icons
+	use("kyazdani42/nvim-web-devicons")
 
-    -- fuzzy finding
-    use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })   -- dependency
-    use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+	-- statusline
+	use("nvim-lualine/lualine.nvim")
 
-    -- autocompletion
-    use("hrsh7th/nvim-cmp")
-    use("hrsh7th/cmp-buffer")
-    use("hrsh7th/cmp-path")
+	-- fuzzy finding
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency
+	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
-    -- snippets 
-    use("L3MON4D3/LuaSnip")
-    use("saadparwaiz1/cmp_luasnip")
-    use("rafamadriz/friendly-snippets")
+	-- autocompletion
+	use("hrsh7th/nvim-cmp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
 
-    -- managing & installing lsp servers, linters and formatters
-    use("williamboman/mason.nvim")
-    use("williamboman/mason-lspconfig.nvim")
- 
-    -- configuring lsp servers
-    use("neovim/nvim-lspconfig")
-    use("hrsh7th/cmp-nvim-lsp")
-    use({ "glepnir/lspsaga.nvim", branch = "main" }) 
-    use("jose-elias-alvarez/typescript.nvim")
-    use("onsails/lspkind.nvim")
+	-- snippets
+	use("L3MON4D3/LuaSnip")
+	use("saadparwaiz1/cmp_luasnip")
+	use("rafamadriz/friendly-snippets")
 
-    -- formatting & linting 
-    use("jose-elias-alvarez/null-ls.nvim")
-    use("jayp0521/mason-null-ls.nvim")
+	-- managing & installing lsp servers, linters and formatters
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
 
-    -- treesitter
-    use({
-        "nvim-treesitter/nvim-treesitter",
-        run = function()
-            require("nvim-treesitter.install").update({ with_sync = true })
-        end,
-    })
+	-- configuring lsp servers
+	use("neovim/nvim-lspconfig")
+	use("hrsh7th/cmp-nvim-lsp")
+	use({ "glepnir/lspsaga.nvim", branch = "main" })
+	use("jose-elias-alvarez/typescript.nvim")
+	use("onsails/lspkind.nvim")
 
-    -- auto closing 
-    use("windwp/nvim-autopairs")
-    use("windwp/nvim-ts-autotag")
+	-- formatting & linting
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("jayp0521/mason-null-ls.nvim")
 
-    -- git signs plugin 
-    use("lewis6991/gitsigns.nvim")
+	-- treesitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			require("nvim-treesitter.install").update({ with_sync = true })
+		end,
+	})
 
-    if packer_bootstrap then
-        require("packer").sync()
-    end
+	-- auto closing
+	use("windwp/nvim-autopairs")
+	use("windwp/nvim-ts-autotag")
+
+	-- git signs plugin
+	use("lewis6991/gitsigns.nvim")
+
+	-- wakatime
+	use("wakatime/vim-wakatime")
+
+	-- discord presence
+	use("andweeb/presence.nvim")
+
+	-- github copilot
+	use("github/copilot.vim")
+
+	if packer_bootstrap then
+		require("packer").sync()
+	end
 end)
