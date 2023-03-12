@@ -2,7 +2,7 @@
 
 ## Neovim setup
 
-Require Neovim (>= 0.7)
+Plugins I use: 
 
 - [packer.nvim](https://github.com/wbthomason/packer.nvim) - A plugin/package management for Neovim
 - [Nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) - Lua `fork` of vim-web-devicons for neovim
