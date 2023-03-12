@@ -14,13 +14,16 @@ Require Neovim (>= 0.7)
 - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip) - Luasnip completion source for nvim-cmp
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip) - Snippet Engine for Neovim written in Lua
 - [lspkind.nvim](https://github.com/onsails/lspkind.nvim) - Vscode-like pictograms for neovim lsp completion items
-- [nvim-notify](https://github.com/rcarriga/nvim-notify) - A fancy, configurable, notification manager for NeoVim
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure neovim statusline plugin written in pure lua
-- [barbar.nvim](https://github.com/romgrk/barbar.nvim) - The neovim tabline plugin
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Nvim Treesitter configurations and abstraction layer
 - [nvim-treesitter-refactor](https://github.com/nvim-treesitter/nvim-treesitter-refactor) - Refactor module for nvim-treesitter 
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Find, Filter, Preview, Pick. All lua, all the time
 - [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim) - Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+- [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Autopairs for neovim written by lua
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers
+- [vim-wakatime](https://github.com/wakatime/vim-wakatime) - Vim plugin for automatic time tracking and metrics generated from your programming activity.
+- [presence.nvim](https://github.com/andweeb/presence.nvim) - Discord Rich Presence for Neovim
+- [copilot.vim](https://github.com/github/copilot.vim) - Neovim plugin for GitHub Copilot
 
 ## Cusom Neovim Keymaps
 
